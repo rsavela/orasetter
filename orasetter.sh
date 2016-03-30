@@ -4,6 +4,9 @@
 #   oracle databases, setting the correct ORACLE_HOME and
 #   ORACLE_SID
 
+# Save the LD_LIBRARY_PATH
+
+export LD_ORIG=$LD_LIBRARY_PATH
 
 # Loop over /etc/oratab
 
@@ -17,6 +20,7 @@ while read line; do
    sqlplus_${SID}() { 
     export ORACLE_SID=${SID}
     export ORACLE_HOME=${ORAHOME}
+    export LD_LIBRARY_PATH=\${ORACLE_HOME}/lib:\$LD_ORIG
     \$ORACLE_HOME/bin/sqlplus / as sysdba
   }
 EOF
