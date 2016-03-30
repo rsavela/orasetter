@@ -1,4 +1,4 @@
-
+## Overview
 
 Have you ever managed multiple Oracle RDBMS instances on a single
 server?  Perhaps a few dozen?  You probably find yourself typing
@@ -22,18 +22,33 @@ As these functions are defined each time a login shell is invoked, it
 also has the added feature of self-configuring for each new database
 instance that is created.
 
-Setup
+## Setup
 
-The script is hosted on github here.  Either git clone <git url>, or
-copy and paste the text into a file.
+The script is hosted on github here.  Either `git clone git@github.com:rsavela/orasetter.git`,
+or copy and paste the text into a file.  I assume you will clone into the
+oracle user's home directory.
+
+```
+cd ~
+git clone git@github.com:rsavela/orasetter.git
+```
 
 Add this line to your `~/.bashrc`, and log back in.  That's it.
 
-Usage
+```
+. ~/orasetter/orasetter.sh
+```
+
+## Usage
 
 Just type `sqlplus_`  and hit the tab key.  You should see the
 functions defined for each database in the `/etc/oratab`.  Type the
 first few letters of the one you want, hit <TAB> and <ENTER>.
+
+```
+oracle@computer $ sqlplus_
+sqlplus_+ASM1      sqlplus_CLONE_PRD  sqlplus_oelo       sqlplus_prod1      sqlplus_test1  
+```
 
 Hope this is helpful to someone.  Please feel free to send me
 suggestions or ideas for improvement.  I will probably add support for

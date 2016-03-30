@@ -10,13 +10,13 @@
 while read line; do
   params=(${line//:/ })
   SID=${params[0]}
-  HOME=${params[1]}
+  ORAHOME=${params[1]}
 
  # define a function for each SID
  eval "$(cat <<EOF
    sqlplus_${SID}() { 
     export ORACLE_SID=${SID}
-    export ORACLE_HOME=${HOME}
+    export ORACLE_HOME=${ORAHOME}
     \$ORACLE_HOME/bin/sqlplus / as sysdba
   }
 EOF
