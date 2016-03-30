@@ -43,7 +43,7 @@ Add this line to your `~/.bashrc`, and log back in.  That's it.
 
 Just type `sqlplus_`  and hit the tab key.  You should see the
 functions defined for each database in the `/etc/oratab`.  Type the
-first few letters of the one you want, hit <TAB> and <ENTER>.
+first few letters of the one you want, hit TAB and ENTER.
 
 ```
 oracle@computer $ sqlplus_
