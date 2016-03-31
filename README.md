@@ -3,7 +3,7 @@
 Have you ever managed multiple Oracle RDBMS instances on a single
 server?  Perhaps a few dozen?  You probably find yourself typing
 export `ORACLE_HOME=/u01/app/oracle; ORACLE_SID=DEV2;
-$ORACLE_HOME/sqlplus` a few hundred times a day.  Or you forget, or you
+$ORACLE_HOME/bin/sqlplus` a few hundred times a day.  Or you forget, or you
 make a typo.  Certainly annoying.
 
 Since I am a lazy typist, I often define aliases or bash functions to
